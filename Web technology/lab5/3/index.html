@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            margin: 30px;
+            font-size: 25px;
+            width: 30%;
+        }
+        
+        img {
+            display: flex;
+            margin: 18em;
+            margin-top: -50%;
+            margin-bottom: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let requestURL = "countries.json";
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+            if (request.readyState == 4 && request.status == 200) {
+                ExtractData(JSON.parse(request.responseText));
+            }
+        };
+        request.open("GET", requestURL, true);
+        request.send();
+
+        function ExtractData(data) {
+            for (let info of data.infos) {
+                document.write(
+                    "<table class='table'><tr><td style='width: 250px; padding:20px;'>" + "Name : " + "<a style='font-weight:bold;'>" + info.name + "</a>" + "<br>" +
+                    "Capital : " + info.capital + "<br>" +
+                    "Population : " + info.population + "<br>" +
+                    "Region : " + info.region + "<br>" +
+                    "Location : " + info.latlng[0] + " " + info.latlng[1] + "<br>"
+                );
+                document.write("Borders : ")
+                for (let border of info.borders) {
+                    document.write(border + " ");
+                }
+                document.write("</td><tr></table><br><br>");
+                document.write("<br>");
+                document.write('<img src="' + info.flag + '"width="170px" style="margin:25; margin-top:-205; margin-left:300">');
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

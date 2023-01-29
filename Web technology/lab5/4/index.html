@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Itim', cursive;
+            line-height: 40px;
+            font-size: 20px;
+            background: linear-gradient(rgb(196, 196, 196), rgb(241, 241, 241));
+        }
+        
+        .poster {
+            border: 3px solid rgb(54, 2, 78);
+            border-radius: 2%;
+            width: 320px;
+            height: 600px;
+            text-align: center;
+            margin: 5px;
+            background: linear-gradient(#1F1D36, #3F3351, #864879, #E9A6A6);
+        }
+        
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1F1D36;
+            color: rgb(255, 255, 255);
+        }
+        
+        .post {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            width: 280px;
+            padding: 10px;
+            border: none;
+            background-color: rgb(48, 0, 66);
+            font-size: 15px;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="show"></h1>
+    <div id="showingpost" class="post"></div>
+    <h1 id="comiong"></h1>
+    <div id="comingpost" class="post"></div>
+
+    <script>
+        let requestURL = 'movies.json';
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+            if (request.readyState == 4 && request.status == 200) {
+                ExtractData(JSON.parse(request.responseText));
+            }
+        };
+        request.open("GET", requestURL, true);
+        request.send();
+
+        function ExtractData(data) {
+            //Showing
+            let text_show = "";
+            let show = "Showing";
+            document.getElementById("show").innerHTML = show;
+
+            for (let movie of data.movies.showing) {
+                text_show += ("<div class='poster'>" + "<br>");
+                text_show += ('<img src="' + movie.poster + '"width="280px">' + "<br>");
+                text_show += ("<b>" + movie.title_th + "</b>" + "<br>");
+                text_show += ("Release date : " + movie.releasedate + "<br>");
+                text_show += ("<button type='button'>" + "เช็ครอบภาพยนตร์" + "</button>");
+                text_show += ("</div>");
+            }
+            document.getElementById("showingpost").innerHTML = text_show;
+
+            //Coming soon
+            let text_com = "";
+            let comiong = "Coming soon";
+            document.getElementById("comiong").innerHTML = comiong;
+
+            for (let coming of data.movies.comingsoon) {
+                text_com += ("<div class='poster'>" + "<br>");
+                text_com += ('<img src="' + coming.poster + '"width="270px">' + "<br>");
+                text_com += ("<b>" + coming.title_th + "</b>" + "<br>");
+                text_com += ("Release date : " + coming.releasedate + "<br>");
+                text_com += ("<button type='button'>" + "เช็ครอบภาพยนตร์" + "</button>");
+                text_com += ("</div>");
+            }
+            document.getElementById("comingpost").innerHTML = text_com;
+        }
+    </script>
+</body>
+
+</html>

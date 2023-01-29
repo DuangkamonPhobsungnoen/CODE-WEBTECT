@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            padding: 1%;
+            font-family: 'Kanit', sans-serif;
+        }
+        
+        hr {
+            margin-left: 0;
+            border: 0.5px solid black;
+            width: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="calform" action="index.php" method="post">
+        <br>
+        <h4 style="display:inline;">กรอกสูตรคูณ : </h4>
+        <input id="inpvalue" name="inpvalue" type="number">
+        <input type="submit" value="แสดงตาราง">
+    </form>
+    <table>
+        <?php
+        if (isset($_POST['inpvalue'])) {
+            $number = $_POST['inpvalue'];
+            $v = intval($number);
+            for ($i = 1; $i <= 12; $i++) {
+                echo "$v    x   $i  =   " . $v * $i .  "<hr>";
+            }
+        }
+        ?>
+    </table>
+</body>
+
+</html>

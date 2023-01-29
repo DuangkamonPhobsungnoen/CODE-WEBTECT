@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+            --color1: #E9DAC1;
+            --color2: #FFFBE9;
+            --color3: #BF9270;
+            --color4: rgb(249, 203, 159);
+            --color5: rgb(7, 6, 0);
+            --color6: rgb(245, 194, 153);
+            --color7: linear-gradient(#EC7272, #F7A76C, #E0D98C, #C3FF99);
+            --color8: linear-gradient(hsl(0, 71%, 85%), hsl(24, 100%, 88%), hsl(43, 78%, 91%), hsl(202, 55%, 71%));
+        }
+        
+        .onclick {
+            position: sticky;
+            top: 0%;
+            left: 0%;
+            border-left: 1em solid var(--color1);
+            border-right: 1em solid var(--color1);
+            padding: .5em;
+            background: var(--color2);
+            z-index: 1;
+            font-size: 14px;
+            text-align: center;
+            font-family: 'Nanum Pen Script', cursive;
+            border-radius: 20px 0 0 0px;
+        }
+        
+        .HELLO {
+            position: relative;
+            font-size: 120px;
+            font-family: 'Nanum Pen Script', cursive;
+            padding-left: 140%;
+            padding-top: 5%;
+            text-shadow: 4px 4px var(--color3);
+        }
+        
+        .ABOUT_ME {
+            position: relative;
+            font-size: 55px;
+            font-family: 'Nanum Pen Script', cursive;
+            padding-left: 210%;
+            padding-top: 5%;
+            z-index: 1;
+        }
+        
+        #picture_book {
+            background-image: url(https://media.discordapp.net/attachments/902791873599528990/977398143236861952/unknown.png);
+            height: 44vw;
+            width: 35vw;
+            border-radius: 20px 0 0 0px;
+            background-size: cover;
+        }
+        
+        #picture_me {
+            background-image: url(https://media.discordapp.net/attachments/902791873599528990/977405228154507264/unknown.png);
+            position: absolute;
+            top: -12%;
+            left: 15%;
+            height: 50.1vw;
+            width: 29vw;
+            background-size: cover;
+        }
+        
+        .card {
+            background: linear-gradient(#E5CB9F, #FFD9C0, #FAF0D7, #DAE5D0);
+            display: flex;
+            height: 258vw;
+            width: 97.5vw;
+            border-radius: 20px;
+            /* box-shadow: 5px 5px 15px #C85C5C; */
+        }
+        
+        .social {
+            z-index: 1;
+            position: relative;
+            padding-top: 3%;
+            padding-left: 260%;
+            font-size: 55px;
+            background-size: cover;
+        }
+        
+        a {
+            color: #46244C;
+            transition: all .2s;
+        }
+        
+        a:hover {
+            opacity: .5;
+        }
+        
+        .name {
+            position: absolute;
+            left: 158%;
+            top: 75%;
+            text-align: center;
+        }
+        
+        .cloud1 {
+            position: absolute;
+            left: 70%;
+            top: -8%;
+            opacity: .5;
+            background-size: cover;
+        }
+        
+        .cloud2 {
+            position: absolute;
+            left: 21%;
+            top: 73%;
+            background-size: cover;
+            z-index: 1;
+        }
+        
+        .leaf {
+            position: absolute;
+            top: -5%;
+            background-size: cover;
+        }
+        
+        .leaf div {
+            display: inline-block;
+            animation: leaf 12s infinite;
+        }
+        
+        .leaf div:nth-child(1) {
+            animation-duration: 7s;
+            animation-delay: 1.3s;
+        }
+        
+        .leaf div:nth-child(2) {
+            animation-duration: 8s;
+            animation-delay: 5.8s;
+        }
+        
+        .leaf div:nth-child(3) {
+            animation-duration: 9s;
+            animation-delay: 7.5s;
+        }
+        
+        .leaf div:nth-child(4) {
+            animation-duration: 10s;
+            animation-delay: 2.7s;
+        }
+        
+        .leaf div:nth-child(5) {
+            animation-duration: 13s;
+            animation-delay: 3.5s;
+        }
+        
+        .leaf div:nth-child(6) {
+            animation-duration: 15s;
+            animation-delay: 5.5s;
+        }
+        
+        .leaf div:nth-child(7) {
+            animation-duration: 8s;
+            animation-delay: 7s;
+        }
+        
+        .leaf div:nth-child(8) {
+            animation-duration: 10s;
+            animation-delay: 3s;
+        }
+        
+        .leaf div:nth-child(9) {
+            animation-duration: 7s;
+            animation-delay: 2s;
+        }
+        
+        .leaf div:nth-child(10) {
+            animation-duration: 9s;
+            animation-delay: 5.5s;
+        }
+        
+        .leaf div:nth-child(11) {
+            animation-duration: 12s;
+            animation-delay: 7s;
+        }
+        
+        .leaf div:nth-child(12) {
+            animation-duration: 5s;
+            animation-delay: 2s;
+        }
+        
+        @keyframes leaf {
+            0% {
+                transform: translate(0px, 0px) rotateZ(30deg);
+                opacity: 0%;
+            }
+            50% {
+                transform: translate(100px, 460px) rotateZ(60deg);
+                opacity: 50%;
+            }
+            50% {
+                transform: translate(215px, 460px) rotateZ(90deg);
+                opacity: 90%;
+            }
+            75% {
+                transform: translate(215px, 460px) rotateZ(120deg);
+                opacity: 50%;
+            }
+            100% {
+                opacity: 0%;
+                transform: translate(215px, 460px) rotateZ(150deg);
+            }
+        }
+        
+        .stu {
+            position: absolute;
+            top: 100%;
+            left: 51%;
+            z-index: 1;
+            background-size: cover;
+        }
+        
+        .road {
+            position: absolute;
+            top: 85%;
+            background-image: url(https://media.discordapp.net/attachments/902791873599528990/977765707859247124/unknown.png);
+            height: 1000px;
+            width: 1300px;
+            opacity: 40%;
+            border-radius: 20px 0 0 0px;
+            background-size: cover;
+            left: -480%;
+        }
+        
+        .box_personal {
+            position: absolute;
+            top: 80%;
+            left: -300%;
+            background: var(--color6);
+            height: 200px;
+            width: 300px;
+            border-radius: 30px;
+            box-shadow: 5px 5px 5px var(--color5);
+        }
+        
+        .text_personal {
+            font-family: 'Mitr', sans-serif;
+            text-align: center;
+        }
+        
+        .box_skill {
+            position: absolute;
+            top: 200%;
+            left: 170%;
+            background: var(--color6);
+            height: 200px;
+            width: 300px;
+            border-radius: 30px;
+            box-shadow: 5px 5px 5px var(--color5);
+        }
+        
+        .text_skill {
+            font-family: 'Mitr', sans-serif;
+            text-align: center;
+        }
+        
+        .box_Eva {
+            position: absolute;
+            top: 620%;
+            left: -370%;
+            background: var(--color6);
+            height: 340px;
+            width: 560px;
+            border-radius: 30px;
+            box-shadow: 5px 5px 5px var(--color5);
+        }
+        
+        .text_Eva {
+            font-family: 'Mitr', sans-serif;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .box_personal:hover {
+            transform: scale(1.2) rotate(-2deg);
+            box-shadow: 5px 5px 5px var(--color4);
+        }
+        
+        .box_skill:hover {
+            transform: scale(1.15) rotate(2deg);
+            box-shadow: 5px 5px 5px var(--color4);
+        }
+        
+        .box_Eva:hover {
+            transform: scale(1.1) rotate(-2deg);
+            box-shadow: 5px 5px 5px var(--color4);
+        }
+        
+        .TheEnd {
+            position: absolute;
+            left: 110%;
+            top: 720%;
+            z-index: 1;
+        }
+        
+        .TEXT {
+            position: absolute;
+            top: 10%;
+            left: 0%;
+        }
+        
+        @keyframes walk {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            25% {
+                transform: translate(-130px, 120px);
+            }
+            50% {
+                transform: translate(80px, 280px);
+            }
+            75% {
+                transform: translate(-280px, 525px);
+            }
+            100% {
+                transform: translate(170px, 850px);
+            }
+        }
+        
+        .stu1 {
+            position: absolute;
+            z-index: 1;
+            background-size: cover;
+            animation: walk 10s infinite;
+        }
+        
+        .performance {
+            font-family: 'Mitr', sans-serif;
+            font-size: 30px;
+            position: absolute;
+            top: 900%;
+            left: -100%;
+        }
+        
+        .box_performance1 {
+            position: absolute;
+            top: 200%;
+            left: -200%;
+            background: var(--color7);
+            height: 320px;
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px var(--color5);
+        }
+        
+        .performance1 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box_performance1:hover {
+            transform: scalez(1.1) rotate(-3deg);
+        }
+        
+        .box_performance2 {
+            position: absolute;
+            top: 450%;
+            left: 90%;
+            background: var(--color7);
+            height: 320px;
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px var(--color5);
+        }
+        
+        .performance2 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box_performance2:hover {
+            transform: scalez(1.1) rotate(3deg);
+        }
+        
+        .box_performance3 {
+            position: absolute;
+            top: 1000%;
+            left: -200%;
+            background: var(--color8);
+            height: 320px;
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px var(--color5);
+        }
+        
+        .performance3 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box_performance3:hover {
+            transform: scalez(1.1) rotate(-3deg);
+        }
+        
+        .box_performance4 {
+            position: absolute;
+            top: 1250%;
+            left: 90%;
+            background: var(--color8);
+            height: 320px;
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px var(--color5);
+        }
+        
+        .performance4 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box_performance4:hover {
+            transform: scalez(1.1) rotate(3deg);
+        }
+        
+        .box_performance5 {
+            position: absolute;
+            top: 1800%;
+            left: -200%;
+            background: var(--color7);
+            height: 320px;
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px var(--color5);
+        }
+        
+        .performance5 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box_performance5:hover {
+            transform: scalez(1.1) rotate(-3deg);
+        }
+        
+        .box_performance6 {
+            position: absolute;
+            top: 2570%;
+            left: -190%;
+            background: var(--color6);
+            height: 170px;
+            width: 1050px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px var(--color5);
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        .box_performance6:hover {
+            transform: scalez(1.1) rotate(-1deg);
+        }
+    </style>
+    <script>
+        function setSize(size) {
+            document.body.style.fontSize = size;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="leaf">
+        <div>🍁</div>
+        <div>🍂</div>
+        <div>🍊</div>
+        <div>🍂</div>
+        <div>🍁</div>
+        <div>🍊</div>
+        <div>🍁</div>
+        <div>🍂</div>
+        <div>🍊</div>
+        <div>🍂</div>
+        <div>🍁</div>
+        <div>🍊</div>
+    </div>
+    <div class="card">
+        <div id="picture_book">
+            <div class="onclick"> <b><u>FONT SIZE</u></b> ➞ &nbsp&nbsp SMALL <input type="button" value="CLICK" min="1" max="2" onclick="setSize('small')"> &nbsp&nbsp MEDIUM <input type="button" value="CLICK" min="1" max="2" onclick="setSize('medium')"> &nbsp&nbsp LARGE
+                <input type="button" value="CLICK" min="1" max="2" onclick="setSize('large')">
+            </div>
+            <div class="TEXT">
+                <div class="ABOUT_ME">
+                    ABOUT&nbspME
+                </div>
+                <div class="HELLO">
+                    HELLO!&nbspI'M <br>&nbspCHOMPOO
+                </div>
+                <div class="name">
+                    64070149 <br> Duangkamon&nbspPhobsungnoen <br> Information Technology <br> king&nbspmongkut's&nbspinstitute&nbspof&nbsptechnology&nbspladkrabang
+                </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/dkm_ch/">
+                        <i class="fab fa-instagram">
+                        </i>
+                    </a>
+                    <a href="https://www.facebook.com/dunangkamon.popsunoren">
+                        <i class="fab fa-facebook">
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <div class="cloud1">
+                <img src="https://media.discordapp.net/attachments/941545409992605707/970579430734954506/png-clipart-clouds-clouds-cloud-thumbnail-removebg-preview.png" width="330" height="300">
+            </div>
+            <div class="cloud2">
+                <img src="https://media.discordapp.net/attachments/941545409992605707/970579430734954506/png-clipart-clouds-clouds-cloud-thumbnail-removebg-preview.png" width="360" height="330">
+            </div>
+            <div class="stu">
+                <div class="stu1">
+                    <img src="https://media.discordapp.net/attachments/902791873599528990/978146448350781480/unknown.png" width="95" height="125">
+                </div>
+                <div class="box_personal">
+                    <div class="text_personal"> <br> <b>ข้อมูลส่วนตัว</b> <br> ชื่อ : นางสาวดวงกมล พบสูงเนิน <br> ชื่อเล่น : ชมพู่ <br> วันเกิด : 15 กันยายน 2545 <br> อายุ : 19 ปี <br> เบอร์โทรศัพท์ : 0624965265</div>
+                </div>
+                <div class="box_skill">
+                    <div class="text_skill"> <br><b>ความสามารถพิเศษ</b> <br> Photoshop : ■ ■ ■ ■ ■ ■ 60% <br> SketchUp : ■ ■ ■ ■ ■ ■ ■ 70% <br> Css : ■ ■ ■ ■ ■ ■ 50% <br> Html : ■ ■ ■ ■ ■ ■ 50% <br> Python : ■ ■ ■ ■ ■ 50% </div>
+                </div>
+                <div class="box_Eva">
+                    <div class="text_Eva"> <br> <b>ประเมินตัวเอง</b> <br> &nbsp&nbsp&nbsp&nbsp&nbspในช่วงการเรียนมัลติมีเดียที่ผ่านมารู้สึกว่ามีอะไรหลายๆอย่างเกิดขึ้นแบบไม่ทันตั้งตัวเยอะมาก ทั้งเรื่องกฎกติกาในการเรียนต่างๆดูแตกต่างจากที่เคยเรียน การทำงานร่วมกับเพื่อน คือมันเหมือนเราต้องปรับตัวให้เข้ากับสถานการณ์นี้ให้ได้
+                        ตามจริงเราเป็นคนที่ไม่ค่อยเข้าสังคมเท่าไหร่ คือก็คุยได้แหละแต่ว่าไม่ค่อยยุ่งกับใคร แต่พอมาเรียนมัลติมีเดียก็ทำให้เรามีโอกาสได้คุยกับเพื่อนเยอะขึ้น มีสังคมใหม่ๆไม่อยู่ในกรอบเดิมๆ เรารู้สึกโอเคนะช่วงแรกอาจจะหนักหน่อย แต่ในเรื่องการเข้าสังคมเรารู้สึกเราพัฒนามากๆ
+                        ในเรื่องของการเรียนเราก็รู้สึกพัฒนาเหมือนกัน ถึงตอนแรกๆจะเรียนไม่ค่อยเข้าใจ เพราะส่วนตัวไม่เคยเขียนเว็บมาก่อน และไม่มีพื้นฐาน Html Css แต่ตอนนี้เราสามารถเขียนเว็บเองได้ ขึ้นโครงเองได้ เลยรู้สึกว่าตัวเองพัฒนามากๆ สุดท้ายนี้อยากขอบคุณพี่ๆทุกคนที่มีส่วนช่วยในการพัฒนาตัวเราเองในครั้งนี้
+                        และขอให้ตัวเราเองอย่าหยุดพัฒนาตัวเอง
+                    </div>
+                </div>
+                <div class="TheEnd"><img src="https://media.discordapp.net/attachments/902791873599528990/978127208029782076/unknown.png" width="350" height="200"></div>
+                <div class="road"></div>
+                <div class="performance"><b>ผลงานของฉัน🌹</b>
+                    <div class="box_performance1">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbspCSS Var and CalC
+                        <div class="performance1">
+                            <img src="https://media.discordapp.net/attachments/902791873599528990/978284125347794954/unknown.png?width=1297&height=662" width="480" height="250">
+                        </div>
+                    </div>
+                    <div class="box_performance2">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLaLa Color
+                        <div class="performance2">
+                            <img src="https://media.discordapp.net/attachments/902791873599528990/978284277349376010/unknown.png" width="440" height="250">
+                        </div>
+                    </div>
+                    <div class="box_performance3">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPosition
+                        <div class="performance3">
+                            <img src="https://media.discordapp.net/attachments/902791873599528990/978286025971499008/unknown.png?width=985&height=662" width="410" height="250">
+                        </div>
+                    </div>
+                    <div class="box_performance4">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbspIsometric Art
+                        <div class="performance4">
+                            <img src="https://media.discordapp.net/attachments/902791873599528990/978285097943957544/unknown.png" width="400" height="250">
+                        </div>
+                    </div>
+                    <div class="box_performance5">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbspสัตว์โลกเคิร์ฟๆ
+                        <div class="performance5">
+                            <img src="https://media.discordapp.net/attachments/902791873599528990/978286488292847616/unknown.png?width=882&height=662" width="350" height="250">
+                        </div>
+                    </div>
+                    <div class="box_performance6"> <br> เว็บไซต์นี้เราใช้เทคนิคอะไร? <br> Ans : Color – Hex, RGB, HSL / Css var / Js onclick / Css calc() / Transform / Animation / Hover / Audio
+                        <br>
+                        <audio controls autoplay loop>
+                            <source
+                              src="https://cdn.discordapp.com/attachments/902791873599528990/936951318432604170/THAISUB_-JDS_Fantasy_-Finding-Hope-.mp3"
+                              type="audio/mpeg">
+                          </audio>
+                    </div>
+                </div>
+                <img src="https://media.discordapp.net/attachments/902791873599528990/977769510805311518/unknown.png" width="160" height="140">
+            </div>
+
+        </div>
+        <div id="picture_me">
+        </div>
+    </div>
+</body>
+
+</html>

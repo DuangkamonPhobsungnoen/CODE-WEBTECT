@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="number1" src="http://10.0.15.20/312lab3/images/1.png">
+    <img id="number2" src="http://10.0.15.20/312lab3/images/2.png"> <br>
+    <img id="number3" src="http://10.0.15.20/312lab3/images/3.png">
+    <img id="number4" src="http://10.0.15.20/312lab3/images/4.png">
+    <button onclick="changesrc()">Change</button>
+    <script>
+        function changesrc() {
+            if (document.getElementById('number1').src == "http://10.0.15.20/312lab3/images/1.png") {
+                document.getElementById('number1').src = "http://10.0.15.20/312lab3/images/3.png";
+                document.getElementById('number2').src = "http://10.0.15.20/312lab3/images/1.png";
+                document.getElementById('number3').src = "http://10.0.15.20/312lab3/images/4.png";
+                document.getElementById('number4').src = "http://10.0.15.20/312lab3/images/2.png";
+            } else if (document.getElementById('number1').src == "http://10.0.15.20/312lab3/images/3.png") {
+                document.getElementById('number1').src = "http://10.0.15.20/312lab3/images/4.png";
+                document.getElementById('number2').src = "http://10.0.15.20/312lab3/images/3.png";
+                document.getElementById('number3').src = "http://10.0.15.20/312lab3/images/2.png";
+                document.getElementById('number4').src = "http://10.0.15.20/312lab3/images/1.png";
+            } else if (document.getElementById('number1').src == "http://10.0.15.20/312lab3/images/4.png") {
+                document.getElementById('number1').src = "http://10.0.15.20/312lab3/images/2.png";
+                document.getElementById('number2').src = "http://10.0.15.20/312lab3/images/4.png";
+                document.getElementById('number3').src = "http://10.0.15.20/312lab3/images/1.png";
+                document.getElementById('number4').src = "http://10.0.15.20/312lab3/images/3.png";
+            } else if (document.getElementById('number1').src == "http://10.0.15.20/312lab3/images/2.png") {
+                document.getElementById('number1').src = "http://10.0.15.20/312lab3/images/1.png";
+                document.getElementById('number2').src = "http://10.0.15.20/312lab3/images/2.png";
+                document.getElementById('number3').src = "http://10.0.15.20/312lab3/images/3.png";
+                document.getElementById('number4').src = "http://10.0.15.20/312lab3/images/4.png";
+            }
+        }
+    </script>
+</body>
+
+</html>

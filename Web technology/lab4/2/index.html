@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            line-height: 30px;
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="firstname" id="firstname">ชื่อ: </label>
+        <input type="text">
+    </div>
+    <div>
+        <label for="lastname" id="lastname">นามสกุล: </label>
+        <input type="text">
+    </div>
+    <div>
+        <label for="country" id="country">ประเทศ:  <select name="country">
+            <option selected>เลือกประเทศ</option>
+            <option>ไทย</option>
+            <option>เวียดนาม</option>
+            <option>ลาว</option>
+            <option>มาเลย์เซีย</option>
+            <option>สิงคโปร์</option>
+            <option>ฟิลิปปินส์</option>
+            <option>เมียนมาร์</option>
+            <option>กัมพูชา</option>
+            <option>บรูไน</option>
+        </select></label>
+    </div>
+    <div>
+        <button id="btn" onclick="English()" type="button">เปลี่ยนเป็นภาษาอังกฤษ</button>
+    </div>
+    <script>
+        function English() {
+            let nameEN = document.getElementById("firstname");
+            nameEN.innerHTML = "First Name: "
+            let snameEN = document.getElementById("lastname");
+            snameEN.innerHTML = "Last Name: "
+            let countryEN = document.getElementById("country");
+            countryEN.innerHTML = "Country: <select>" +
+                "<option selected>Select a country</option>" +
+                "<option>Thai</option>" +
+                "<option>Vietnam</option>" +
+                "<option>Laos</option>" +
+                "<option>Malaysia</option>" +
+                "<option>Singapore</option>" +
+                "<option>Philippines</option>" +
+                "<option>Myanmar</option>" +
+                "<option>Cambodia</option>" +
+                "<option>Brunei</option></select>"
+            let btnEN = document.getElementById("btn");
+            btnEN.innerText = "Change to Thai"
+            btnEN.onclick = function() {
+                Thailand();
+            }
+        }
+
+        function Thailand() {
+            let nameTH = document.getElementById("firstname");
+            nameTH.innerHTML = "ชื่อ: "
+            let snameTH = document.getElementById("lastname");
+            snameTH.innerHTML = "นามสกุล: "
+            let countryTH = document.getElementById("country");
+            countryTH.innerHTML = "ประเทศ: <select>" +
+                "<option selected>เลือกประเทศ</option>" +
+                "<option>ไทย</option>" +
+                "<option>เวียดนาม</option>" +
+                "<option>ลาว</option>" +
+                "<option>มาเลย์เซีย</option>" +
+                "<option'>สิงคโปร์</option>" +
+                "<option>ฟิลิปปินส์</option>" +
+                "<option>เมียนมาร์</option>" +
+                "<option>กัมพูชา</option>" +
+                "<option>บรูไน</option></select>"
+            let btnTH = document.getElementById("btn");
+            btnTH.innerText = "เปลี่ยนเป็นภาษาอังกฤษ"
+            btnTH.onclick = function() {
+                English();
+            }
+        }
+    </script>
+</body>
+
+</html>

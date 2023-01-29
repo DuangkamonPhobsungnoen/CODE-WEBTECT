@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+        body {
+            padding: 1%;
+            font-family: 'Alkalami', serif;
+            background: linear-gradient(#E1FFB1, #C7F2A4);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Member Registration</h2>
+    <form id="form" action="form.php" method="POST">
+        <label for="Name">Name:</label><br>
+        <input type="text" id="Name" name="Name" size="40"><br>
+
+        <label for="Address">Address:</label><br>
+        <textarea type="text" id="Address" name="Address" rows="5" cols="30"></textarea><br>
+
+        <label for="Age">Age:</label><br>
+        <input type="number" id="Age" name="Age" size="5"><br>
+
+        <label for="Profession">Profession:</label><br>
+        <input type="text" id="Profession" name="Profession" size="40"><br>
+
+        <label for="re">Residential status:</label><br>
+        <input type="radio" id="re" name="re" value="Resident" checked>Resident
+        <input type="radio" id="re" name="re" value="Non-Resident">Non-Resident<br>
+
+        <input type="submit" id="submit" value="Submit">
+    </form>
+</body>
+
+</html>

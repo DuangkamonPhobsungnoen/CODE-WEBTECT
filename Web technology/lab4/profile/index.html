@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta charset="TIS-620">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+            --color1: #E9DAC1;
+            --color2: #FFFBE9;
+            --color3: ##f7c1b2;
+            --color4: rgb(249, 203, 159);
+            --color5: rgb(7, 6, 0);
+            --color6: rgb(245, 194, 153);
+            --color7: linear-gradient(#756f97, #F675A8, #F29393, #FFCCB3);
+            --color8: linear-gradient(hsl(0, 71%, 85%), hsl(24, 100%, 88%), hsl(43, 78%, 91%), hsl(202, 55%, 71%));
+        }
+        
+        .onclick {
+            position: sticky;
+            top: 0%;
+            left: 0%;
+            border-left: 1em solid var(--color1);
+            border-right: 1em solid var(--color1);
+            padding: .5em;
+            background: var(--color2);
+            z-index: 1;
+            font-size: 8px;
+            text-align: center;
+            font-family: 'Silkscreen', cursive;
+            border-radius: 20px 0 0 0px;
+        }
+        
+        .HELLO {
+            position: relative;
+            font-size: 77px;
+            font-family: 'Silkscreen', cursive;
+            padding-left: 138%;
+            padding-top: 7%;
+            text-shadow: 4px 4px 4px var(--color2);
+        }
+        
+        .ABOUT_ME {
+            position: relative;
+            font-size: 30px;
+            font-family: 'Silkscreen', cursive;
+            padding-left: 215%;
+            padding-top: 5%;
+            z-index: 1;
+        }
+        
+        #picture_book {
+            background-image: url(https://media.discordapp.net/attachments/902791873599528990/1013280456139092028/unknown.png);
+            height: 44vw;
+            width: 38.8vw;
+            border-radius: 20px 0 0 0px;
+            background-size: cover;
+        }
+        
+        #picture_me {
+            background-image: url(https://media.discordapp.net/attachments/902791873599528990/1013278669449482270/unknown.png?width=373&height=662);
+            position: absolute;
+            top: -12%;
+            left: 15%;
+            height: 50.1vw;
+            width: 29vw;
+            background-size: cover;
+        }
+        
+        .card {
+            background: linear-gradient(#f7c1b2, #DEB6AB, #ECCCB2, #F5E8C7, #f5b8e6, #f9a6c7);
+            display: flex;
+            height: 250vw;
+            width: 97.5vw;
+            border-radius: 20px;
+            /* box-shadow: 5px 5px 15px #C85C5C; */
+        }
+        
+        .social {
+            z-index: 1;
+            position: relative;
+            padding-top: 3%;
+            padding-left: 260%;
+            font-size: 55px;
+            background-size: cover;
+        }
+        
+        a {
+            color: #46244C;
+            transition: all .2s;
+        }
+        
+        a:hover {
+            opacity: .5;
+        }
+        
+        .name {
+            position: absolute;
+            left: 132%;
+            top: 80%;
+            text-align: center;
+            font-family: 'Silkscreen', cursive;
+        }
+        
+        .cloud1 {
+            position: absolute;
+            left: 70%;
+            top: -8%;
+            opacity: .5;
+            background-size: cover;
+        }
+        
+        .cloud2 {
+            position: absolute;
+            left: 21%;
+            top: 73%;
+            background-size: cover;
+            z-index: 1;
+        }
+        
+        .leaf {
+            position: absolute;
+            top: -5%;
+            background-size: cover;
+        }
+        
+        .leaf div {
+            display: inline-block;
+            animation: leaf 12s infinite;
+        }
+        
+        .leaf div:nth-child(1) {
+            animation-duration: 7s;
+            animation-delay: 1.3s;
+        }
+        
+        .leaf div:nth-child(2) {
+            animation-duration: 8s;
+            animation-delay: 5.8s;
+        }
+        
+        .leaf div:nth-child(3) {
+            animation-duration: 9s;
+            animation-delay: 7.5s;
+        }
+        
+        .leaf div:nth-child(4) {
+            animation-duration: 10s;
+            animation-delay: 2.7s;
+        }
+        
+        .leaf div:nth-child(5) {
+            animation-duration: 13s;
+            animation-delay: 3.5s;
+        }
+        
+        .leaf div:nth-child(6) {
+            animation-duration: 15s;
+            animation-delay: 5.5s;
+        }
+        
+        .leaf div:nth-child(7) {
+            animation-duration: 8s;
+            animation-delay: 7s;
+        }
+        
+        .leaf div:nth-child(8) {
+            animation-duration: 10s;
+            animation-delay: 3s;
+        }
+        
+        .leaf div:nth-child(9) {
+            animation-duration: 7s;
+            animation-delay: 2s;
+        }
+        
+        .leaf div:nth-child(10) {
+            animation-duration: 9s;
+            animation-delay: 5.5s;
+        }
+        
+        .leaf div:nth-child(11) {
+            animation-duration: 12s;
+            animation-delay: 7s;
+        }
+        
+        .leaf div:nth-child(12) {
+            animation-duration: 5s;
+            animation-delay: 2s;
+        }
+        
+        @keyframes leaf {
+            0% {
+                transform: translate(0px, 0px) rotateZ(30deg);
+                opacity: 0%;
+            }
+            50% {
+                transform: translate(100px, 460px) rotateZ(60deg);
+                opacity: 50%;
+            }
+            50% {
+                transform: translate(215px, 460px) rotateZ(90deg);
+                opacity: 90%;
+            }
+            75% {
+                transform: translate(215px, 460px) rotateZ(120deg);
+                opacity: 50%;
+            }
+            100% {
+                opacity: 0%;
+                transform: translate(215px, 460px) rotateZ(150deg);
+            }
+        }
+        
+        .TEXT {
+            position: absolute;
+            top: 10%;
+            left: 0%;
+        }
+        
+        .education {
+            position: absolute;
+            left: -10%;
+            top: -180%;
+            width: 600px;
+            height: 230px;
+            background: linear-gradient(#FFF5E4, #FFC4C4);
+            font-family: 'Mali', cursive;
+            transform: rotate(3deg)
+        }
+        
+        .education:hover {
+            transform: scale(1.2) translatey(-5%);
+            box-shadow: 5px 5px 5px #ffffff;
+        }
+        
+        #introduce {
+            position: absolute;
+            left: -310%;
+            top: -50%;
+            width: 300px;
+            height: 230px;
+            background: linear-gradient(#FFF5E4, #FFC4C4);
+            font-family: 'Mali', cursive;
+            line-height: 30px;
+            transform: rotate(-7deg)
+        }
+        
+        .introduce:hover {
+            transform: scale(1.2) translatey(-5%);
+            box-shadow: 5px 5px 5px #ffffff;
+        }
+        
+        .skill {
+            position: absolute;
+            left: 160%;
+            top: 155%;
+            width: 320px;
+            height: 200px;
+            background: linear-gradient(#FFF5E4, #FFC4C4);
+            font-family: 'Mali', cursive;
+            transform: rotate(5deg)
+        }
+        
+        .skill:hover {
+            transform: scale(1.2) translatey(-5%);
+            box-shadow: 5px 5px 5px #ffffff;
+        }
+        
+        .other {
+            position: absolute;
+            left: -355%;
+            top: 630%;
+            width: 520px;
+            height: 230px;
+            background: linear-gradient(#FFF5E4, #FFC4C4);
+            font-family: 'Mali', cursive;
+            line-height: 30px;
+            transform: rotate(-3deg)
+        }
+        
+        .other:hover {
+            transform: scale(1.2) translatey(-5%);
+            box-shadow: 5px 5px 5px #ffffff;
+        }
+        
+        .pin1 {
+            position: absolute;
+            top: -15%;
+            left: 40%;
+        }
+        
+        .pin2 {
+            position: absolute;
+            top: -15%;
+            left: 50%;
+        }
+        
+        .pin3 {
+            position: absolute;
+            top: -15%;
+            left: 45%;
+        }
+        
+        .pin4 {
+            position: absolute;
+            top: 610%;
+            left: 45%;
+        }
+        
+        .stu {
+            position: absolute;
+            top: 150%;
+            left: 51%;
+            z-index: 1;
+            background-size: cover;
+        }
+        
+        .road {
+            position: absolute;
+            top: 85%;
+            background-image: url(https://media.discordapp.net/attachments/902791873599528990/977765707859247124/unknown.png);
+            height: 1000px;
+            width: 1300px;
+            border-radius: 20px 0 0 0px;
+            background-size: cover;
+            left: -480%;
+        }
+        
+        .stu1 {
+            position: absolute;
+            z-index: 1;
+            background-size: cover;
+            animation: walk 10s infinite;
+        }
+        
+        @keyframes walk {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            25% {
+                transform: translate(-130px, 120px);
+            }
+            50% {
+                transform: translate(80px, 280px);
+            }
+            75% {
+                transform: translate(-280px, 525px);
+            }
+            100% {
+                transform: translate(170px, 850px);
+            }
+        }
+        
+        .TheEnd {
+            position: absolute;
+            left: 110%;
+            top: 770%;
+            z-index: 1;
+        }
+        
+        .performance {
+            font-family: 'Mitr', sans-serif;
+            font-size: 30px;
+            position: absolute;
+            top: 900%;
+            left: -100%;
+        }
+        
+        .box_performance {
+            position: absolute;
+            top: 210%;
+            left: -215%;
+            background: #ffffff;
+            height: 10px;
+            width: 1150px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px #fff;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        .box_performance1 {
+            position: absolute;
+            top: 220%;
+            left: -220%;
+            background: var(--color7);
+            height: 200px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px var(--color5);
+            transform: rotate(-10deg);
+            z-index: 1;
+            padding: 1%;
+        }
+        
+        .performance1 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box_performance1:hover {
+            transform: scale(1.2) translatey(-5%);
+            box-shadow: 5px 5px 5px #ffffff;
+        }
+        
+        .pin_performance1 {
+            position: absolute;
+            top: -15%;
+            left: 45%;
+        }
+        
+        .box_performance2 {
+            position: absolute;
+            top: 220%;
+            left: -22%;
+            background: var(--color7);
+            height: 200px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px var(--color5);
+            transform: rotate(5deg);
+            z-index: 1;
+            padding: 1%;
+        }
+        
+        .performance2 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box_performance2:hover {
+            transform: scale(1.2) translatey(-5%);
+            box-shadow: 5px 5px 5px #ffffff;
+        }
+        
+        .pin_performance2 {
+            position: absolute;
+            top: -15%;
+            left: 45%;
+        }
+        
+        .box_performance3 {
+            position: absolute;
+            top: 220%;
+            left: 180%;
+            background: var(--color7);
+            height: 200px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px var(--color5);
+            transform: rotate(-10deg);
+            z-index: 1;
+            padding: 1%;
+        }
+        
+        .performance3 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box_performance3:hover {
+            transform: scale(1.2) translatey(-5%);
+            box-shadow: 5px 5px 5px #ffffff;
+        }
+        
+        .pin_performance3 {
+            position: absolute;
+            top: -12%;
+            left: 45%;
+        }
+        
+        .box_performance4 {
+            position: absolute;
+            top: 1020%;
+            left: -120%;
+            background: var(--color7);
+            height: 200px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px var(--color5);
+            transform: rotate(-10deg);
+            z-index: 1;
+            padding: 1%;
+        }
+        
+        .performance4 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box_performance4:hover {
+            transform: scale(1.2) translatey(-5%);
+            box-shadow: 5px 5px 5px #ffffff;
+        }
+        
+        .pin_performance4 {
+            position: absolute;
+            top: -15%;
+            left: 45%;
+        }
+        
+        .box_performance5 {
+            position: absolute;
+            top: 1020%;
+            left: 100%;
+            background: var(--color7);
+            height: 200px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px var(--color5);
+            transform: rotate(5deg);
+            z-index: 1;
+            padding: 1%;
+        }
+        
+        .performance5 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box_performance5:hover {
+            transform: scale(1.2) translatey(-5%);
+            box-shadow: 5px 5px 5px #ffffff;
+        }
+        
+        .pin_performance5 {
+            position: absolute;
+            top: -15%;
+            left: 45%;
+        }
+        
+        .pic_tree {
+            position: absolute;
+            top: 215%;
+            left: 5%;
+        }
+        
+        .pic_tree1 {
+            position: absolute;
+            top: 235%;
+            left: 45%;
+        }
+        
+        .bush {
+            position: absolute;
+            top: 513%;
+        }
+        
+        .bush1 {
+            position: absolute;
+            top: 517%;
+            left: 23%;
+        }
+        
+        .bush2 {
+            position: absolute;
+            top: 513%;
+            left: 45%;
+            z-index: 1;
+        }
+        
+        .bush3 {
+            position: absolute;
+            top: 513%;
+            left: 68%;
+        }
+        
+        .eng {
+            position: absolute;
+            top: 565%;
+            font-size: 25px;
+            font-family: 'Silkscreen', cursive;
+        }
+    </style>
+    <script>
+        function setSize(size) {
+            document.body.style.fontSize = size;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="leaf">
+        <div>🍁</div>
+        <div>🍂</div>
+        <div>🍊</div>
+        <div>🍂</div>
+        <div>🍁</div>
+        <div>🍊</div>
+        <div>🍁</div>
+        <div>🍂</div>
+        <div>🍊</div>
+        <div>🍂</div>
+        <div>🍁</div>
+        <div>🍊</div>
+    </div>
+    <div class="card">
+        <div id="picture_book">
+            <div class="onclick"> <b><u>FONT SIZE</u></b> ➞ &nbsp&nbsp SMALL <input type="button" value="CLICK" min="1" max="2" onclick="setSize('small')"> &nbsp&nbsp MEDIUM <input type="button" value="CLICK" min="1" max="2" onclick="setSize('medium')"> &nbsp&nbsp LARGE
+                <input type="button" value="CLICK" min="1" max="2" onclick="setSize('large')">
+            </div>
+            <div class="TEXT">
+                <div class="ABOUT_ME">
+                    ABOUT&nbspME
+                </div>
+                <div class="HELLO">
+                    HELLO!&nbspI'M <br>&nbspCHOMPOO
+                </div>
+                <div class="name">
+                    64070149 <br> Duangkamon&nbspPhobsungnoen <br> Information Technology <br> king&nbspmongkut's&nbspinstitute&nbspof&nbsptechnology&nbspladkrabang
+                </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/dkm_ch/">
+                        <i class="fab fa-instagram">
+                        </i>
+                    </a>
+                    <a href="https://www.facebook.com/dunangkamon.popsunoren">
+                        <i class="fab fa-facebook">
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <div class="cloud1">
+                <img src="https://media.discordapp.net/attachments/941545409992605707/970579430734954506/png-clipart-clouds-clouds-cloud-thumbnail-removebg-preview.png" width="330" height="300">
+            </div>
+            <div class="cloud2">
+                <img src="https://media.discordapp.net/attachments/941545409992605707/970579430734954506/png-clipart-clouds-clouds-cloud-thumbnail-removebg-preview.png" width="360" height="330">
+            </div>
+            <div class="stu">
+                <div class="stu1">
+                    <img src="https://media.discordapp.net/attachments/902791873599528990/978146448350781480/unknown.png" width="95" height="125">
+                </div>
+                <div id="introduce">
+                    <div class="pin1"><img src="https://media.discordapp.net/attachments/941545409992605707/1013755571469566072/unknown.png" width="60" height="60"></div>
+                    <h3 align='center'>ข้อมูลส่วนตัว</h3>
+                    <ul>
+                        <li>ชื่อ : นางสาวดวงกมล พบสูงเนิน</li>
+                        <li>ชื่อเล่น : ชมพู่</li>
+                        <li>วันเกิด : 15 กันยายน 2545</li>
+                        <li>อายุ : 19 ปี </li>
+                        <li>เบอร์โทรศัพท์ : 0624965265</li>
+                    </ul>
+                </div>
+                <div class="education">
+                    <div class="pin2"><img src="https://media.discordapp.net/attachments/941545409992605707/1013755571469566072/unknown.png" width="60" height="60"></div>
+                    <h3 align='center'>ระดับการศึกษา</h3>
+                    <ul>
+                        <li>2015-2018 โรงเรียนบดินทรเดชา (สิงห์ สิงหเสนี) สมุทรปราการ</li> <br>
+                        <li>2018-2021 โรงเรียนนวมินทราชินูทิศ สวนกุหลาบวิทยาลัย สมุทรปราการ</li> <br>
+                        <li>2021-ปัจจุบัน สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</li>
+                    </ul>
+                    <h6 align='right'> ชี้เมาส์มาหน่อยฮะ...🤟</h6>
+                </div>
+                <div class="skill">
+                    <div class="pin3"><img src="https://media.discordapp.net/attachments/941545409992605707/1013755571469566072/unknown.png" width="60" height="60"></div>
+                    <h3 align='center'>ความสามารถพิเศษ</h3>
+                    <ul>
+                        <li>Photoshop ■ ■ ■ ■ ■ ■ 60%</li>
+                        <li>SketchUp ■ ■ ■ ■ ■ ■ ■ 70%</li>
+                        <li>Css ■ ■ ■ ■ ■ ■ 50%</li>
+                        <li>Html ■ ■ ■ ■ ■ ■ 50%</li>
+                        <li>Python ■ ■ ■ ■ ■ 50%</li>
+                    </ul>
+                </div>
+                <div class="other">
+                    <div class="pin3"><img src="https://media.discordapp.net/attachments/941545409992605707/1013755571469566072/unknown.png" width="60" height="60"></div>
+                    <h3 align='center'>Q&A เปิดเผยตัวตน</h3>
+                    <ul>
+                        <li>ตอนว่างชอบทำอะไร? : ส่วนมากจะนอนเพราะเหนื่อย</li>
+                        <li>คิดว่าตัวเองเป็นคนยังไง? : ก็คงเป็นคนเรื่อยๆ ยังไงก็ได้</li>
+                        <li>ชอบฟังเพลงแนวไหน? : ไทย สากล</li>
+                        <li>เขียน code ภาษาอะไรได้บ้าง? : Python, Html, Css, Java, C++
+
+</Html>
+</li>
+<li>แล้วชอบเขียนภาษาอะไรที่สุด? : Css, Html ชอบเวลาได้แต่งเว็บ</li>
+
+</ul>
+</div>
+<div class="TheEnd"><img src="https://media.discordapp.net/attachments/902791873599528990/978127208029782076/unknown.png" width="350" height="200"></div>
+<div class="road"></div>
+<br>
+<div class="performance"><b>ผลงานของฉัน🌹</b>
+    <br>
+    <div class="box_performance1">
+        <div class="pin_performance1"><img src="https://media.discordapp.net/attachments/941545409992605707/1013755571469566072/unknown.png" width="60" height="60"></div>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbspVar and CalC
+        <div class="performance1">
+            <img src="https://media.discordapp.net/attachments/902791873599528990/978284125347794954/unknown.png?width=1297&height=662" width="300" height="140">
+        </div>
+    </div>
+    <div class="box_performance2">
+        <div class="pin_performance2"><img src="https://media.discordapp.net/attachments/941545409992605707/1013755571469566072/unknown.png" width="60" height="60"></div>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLaLa Color
+        <div class="performance2">
+            <img src="https://media.discordapp.net/attachments/902791873599528990/978284277349376010/unknown.png" width="300" height="140">
+        </div>
+    </div>
+    <div class="box_performance3">
+        <div class="pin_performance3"><img src="https://media.discordapp.net/attachments/941545409992605707/1013755571469566072/unknown.png" width="60" height="60"></div>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPosition
+        <div class="performance3">
+            <img src="https://media.discordapp.net/attachments/902791873599528990/978286025971499008/unknown.png?width=985&height=662" width="300" height="140">
+        </div>
+    </div>
+    <div class="box_performance4">
+        <div class="pin_performance4"><img src="https://media.discordapp.net/attachments/941545409992605707/1013755571469566072/unknown.png" width="60" height="60"></div>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSVG
+        <div class="performance4">
+            <img src="https://media.discordapp.net/attachments/941545409992605707/1014182528007020564/unknown.png?width=869&height=663" width="230" height="140">
+        </div>
+    </div>
+    <div class="box_performance5">
+        <div class="pin_performance5"><img src="https://media.discordapp.net/attachments/941545409992605707/1013755571469566072/unknown.png" width="60" height="60"></div>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIsometric Art
+        <div class="performance5">
+            <img src="https://media.discordapp.net/attachments/902791873599528990/978285097943957544/unknown.png" width="300" height="140">
+        </div>
+    </div>
+    <div class="box_performance">
+        <br>
+    </div>
+</div>
+<img src="https://media.discordapp.net/attachments/902791873599528990/977769510805311518/unknown.png" width="160" height="140">
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<audio controls autoplay loop>
+    <source
+      src="https://cdn.discordapp.com/attachments/902791873599528990/936951318432604170/THAISUB_-JDS_Fantasy_-Finding-Hope-.mp3"
+      type="audio/mpeg">
+  </audio>
+</div>
+<div class="pic_tree">
+    <img src="https://media.discordapp.net/attachments/941545409992605707/1014816803538616361/unknown.png" width="300" height="200">
+</div>
+<div class="pic_tree1">
+    <img src="https://media.discordapp.net/attachments/941545409992605707/1014819118614069268/unknown.png" width="300" height="280">
+</div>
+<div class="bush">
+    <img src="https://media.discordapp.net/attachments/941545409992605707/1014817103867543592/unknown.png" width="400" height="350">
+</div>
+<div class="bush1">
+    <img src="https://media.discordapp.net/attachments/941545409992605707/1014817103867543592/unknown.png" width="350" height="320">
+</div>
+<div class="bush2">
+    <img src="https://media.discordapp.net/attachments/941545409992605707/1014817103867543592/unknown.png" width="400" height="350">
+</div>
+<div class="bush3">
+    <img src="https://media.discordapp.net/attachments/941545409992605707/1014817103867543592/unknown.png" width="400" height="350">
+</div>
+<div class="eng">
+    No matter how much it hurts, you have to hold your head up and keep going.
+</div>
+</div>
+<div id="picture_me">
+</div>
+</div>
+</body>
+
+</html>

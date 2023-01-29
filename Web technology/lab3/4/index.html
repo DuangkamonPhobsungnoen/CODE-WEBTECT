@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .apple {
+            width: 4%;
+            background-color: rgb(254, 158, 158);
+        }
+        
+        .banana {
+            width: 4%;
+            background-color: rgb(248, 254, 158);
+        }
+        
+        .coconut {
+            width: 4%;
+            background-color: rgb(176, 254, 158);
+        }
+        
+        .grape {
+            width: 4%;
+            background-color: rgb(243, 158, 254);
+        }
+        
+        .orange {
+            width: 4%;
+            background-color: rgb(254, 201, 158);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="apple">apple</div> <br>
+    <div class="banana">banana</div> <br>
+    <div class="coconut">coconut</div> <br>
+    <div class="grape">grape</div> <br>
+    <div class="orange">orange</div> <br>
+    <button onclick="ViewChart()">View Chart</button>
+    <script>
+        function ViewChart() {
+            let apple = document.querySelector('.apple');
+            apple.style.width = '30%';
+            let banana = document.querySelector('.banana');
+            banana.style.width = '60%';
+            let coconut = document.querySelector('.coconut');
+            coconut.style.width = '50%';
+            let grape = document.querySelector('.grape');
+            grape.style.width = '25%';
+            let orange = document.querySelector('.orange');
+            orange.style.width = '40%';
+        }
+    </script>
+</body>
+
+</html>

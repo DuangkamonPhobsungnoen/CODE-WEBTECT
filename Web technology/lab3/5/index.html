@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine&family=Permanent+Marker&family=Silkscreen&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Silkscreen', cursive;
+            background-size: cover;
+            opacity: 85%;
+            background-image: url(https://media.discordapp.net/attachments/908570782429487134/1012997820271304704/unknown.png?width=995&height=663);
+        }
+        
+        .box {
+            width: 50%;
+            height: 650px;
+            background: linear-gradient(to bottom right, #68A7AD, #68A7AD, #E5CB9F, #EEE4AB);
+        }
+        
+        .text {
+            font-size: 30px;
+            text-align: center;
+            padding: 3%;
+        }
+        
+        .box1 {
+            padding: 5%;
+        }
+        
+        .card {
+            padding: 1%;
+            position: absolute;
+            top: 35%;
+            left: 55%;
+            width: 450px;
+            height: 130px;
+            border-radius: 5px;
+            background: linear-gradient(to bottom right, #7FB77E, #B1D7B4, #B1D7B4);
+            font-family: 'Silkscreen', cursive;
+        }
+        
+        .card:hover {
+            transform: scale(1.2) rotate(2deg) translatey(-5%);
+            box-shadow: 5px 5px 5px #ffffff;
+        }
+        
+        .pic {
+            position: absolute;
+            top: 18%;
+            left: 77%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="text">Create your card</div>
+        <div class="box1">
+            <form role="form" id="introduce">
+                <div class="form-group">
+                    <label for="name">Full name</label>
+                    <input type="name" class="form-control" id="name" placeholder="Mr. Banana B2" />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="phone" class="form-control" id="phone" placeholder="0987654321" />
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="64070149@kmitl.ac.th" />
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="company" class="form-control" id="company" placeholder="Banana lnc." />
+                </div>
+            </form>
+            <button onclick="Create()" type="button" 2class="btn btn-default">Create</button>
+        </div>
+    </div>
+    <script>
+        function Create() {
+            // let ประกาศตัวแปร document.forms.ชื่อIDจากForm.ชื่อIDเล็ก.value;
+            //FullName
+            let LastName = document.forms.introduce.name.value;
+            if (LastName == "") {
+                alert("โปรดกรอกชื่อ-นามสกุล...");
+                return false;
+            }
+            if (LastName.length < 2 || LastName.length > 50) {
+                alert("ชื่อและนามสกุล เป็นตัวอักษรความยาวระหว่าง 2-50 ตัวอักษร");
+                return false;
+            }
+            document.getElementById("Name").innerHTML = "Name : " + LastName;
+
+            //Phone
+            let telephone = document.forms.introduce.phone.value;
+            if (telephone == "") {
+                alert("โปรดใส่หมายเลขโทรศัพท์...");
+                return false;
+            }
+            if (telephone.length != 10 || isNaN(telephone)) {
+                alert("โปรดกรอกหมายเลขโทรศัพท์ให้ถูกต้อง!");
+                return false;
+            }
+            document.getElementById("Phone").innerHTML = "Phone : " + telephone;
+
+            //E-mail
+            let mail = document.forms.introduce.email.value;
+            if (mail == "") {
+                alert("โปรดใส่ที่อยู่อีเมล...");
+                return false;
+            }
+            document.getElementById("Email").innerHTML = "E-mail : " + mail;
+
+            //Company
+            let company = document.forms.introduce.company.value;
+            if (company == "") {
+                alert("โปรดใส่ชื่อบริษัท...");
+                return false;
+            }
+            document.getElementById("Company").innerHTML = "Company : " + company;
+        }
+    </script>
+    <div class="card">
+        <h6 id="Name">Name : Duangkamon Phobsungnoen</h6>
+        <h6 id="Phone">Phone : 0624965265</h6>
+        <h6 id="Email">E-mail : 64070149@it.kmitl.ac.th</h6>
+        <h6 id="Company">Company : KMITL</h6>
+        <div class="pic">
+            <img src="https://media.discordapp.net/attachments/908570782429487134/1013019913113305149/unknown.png" width="120" height="120"> </div>
+    </div>
+</body>
+
+</html>

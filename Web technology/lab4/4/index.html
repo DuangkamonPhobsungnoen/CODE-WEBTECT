@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            line-height: 50px;
+        }
+        
+        table,
+        th,
+        td {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="number" id="num">
+        <button onclick="chess()">Submit</button>
+    </div>
+    <div>
+        <table cellspacing="0" id="block_chess"></table>
+    </div>
+    <script>
+        function chess() {
+            let num = document.getElementById("num").value;
+            let table = document.getElementById("block_chess");
+            table.innerHTML = "";
+            let row = table.insertRow();
+
+            for (let i = 1; i <= (+num); i++) {
+                let start = document.getElementById("block_chess");
+                let StartCell = document.createElement("div");
+                StartCell.style.height = "150px";
+                StartCell.style.width = "150px";
+                StartCell.style.border = "2px solid black";
+                //ขึ้นบรรทัดใหม่
+                if (i % 9 == 0) {
+                    row = table.insertRow();
+                    i++;
+                    num++;
+                }
+                //เงื่อนไขสีขาวดำ
+                let col = row.insertCell();
+                if (i % 2 != 0) {
+                    StartCell.style.backgroundColor = "white";
+                } else {
+                    StartCell.style.backgroundColor = "black";
+                }
+                col.appendChild(StartCell);
+            }
+        }
+    </script>
+</body>
+
+</html>

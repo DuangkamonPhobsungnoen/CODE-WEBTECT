@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <label for="Value1">Value 1 :</label>
+            <input type="text" name="Value1" id="Value1" placeholder="" />
+        </div>
+        <br />
+        <div>
+            <label for="Value2">Value2 :</label>
+            <input type="text" name="Value2" id="Value2" placeholder="" />
+        </div>
+
+        <br />
+        <button id="calculate" onclick="calculate()">Calculate</button>
+        <p id="result">Result :</p>
+    </div>
+
+    <script>
+        function calculate() {
+            let val1 = document.getElementById("Value1").value;
+            let val2 = document.getElementById("Value2").value;
+            let pElement = document.createElement("p");
+
+            document.getElementById("result").innerText =
+                "Result : " + (parseInt(val1) + parseInt(val2));
+            pElement.innerText =
+                val1 + " + " + val2 + " = " + (parseInt(val1) + parseInt(val2));
+            document.getElementsByClassName("main")[0].appendChild(pElement);
+        }
+    </script>
+</body>
+
+</html>

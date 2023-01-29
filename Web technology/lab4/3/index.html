@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            line-height: 30px;
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid white;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            font-size: 20px;
+            background-color: #d6d6d6;
+            width: 130px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="div1">
+        <h1>ลงทะเบียนร่วมงาน</h1>
+        <input type="text" id="std_number" placeholder="รหัสนักศึกษา">
+        <input type="text" id="std_name" placeholder="ชื่อ">
+        <input type="text" id="std_surname" placeholder="นามสกุล">
+        <button class="btn btn-info" onclick="submit()">ลงทะเบียน</button>
+        <hr>
+        <table class="table" id="info">
+            <tr>
+                <th>ลำดับที่</th>
+                <th>รหัสนักศึกษา</th>
+                <th>ชื่อ</th>
+                <th>นามสกุล</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var count = 0;
+
+        function submit() {
+            count++;
+            let number = document.getElementById("std_number").value;
+            let fname = document.getElementById("std_name").value;
+            let lname = document.getElementById("std_surname").value;
+            let table = document.getElementById('info');
+            var row = table.insertRow();
+            var col, text;
+
+            col = row.insertCell();
+            //insertCell(position); ใช้เพิ่มแถวเข้าไปใน element tr ในตำแหน่งที่กำหนด
+            text = document.createTextNode(count);
+            //createTextNode(string); ใช้ในการสร้าง text node (ข้อความใน tag คำสั่งของ html)
+            col.appendChild(text);
+
+            col = row.insertCell();
+            text = document.createTextNode(number);
+            col.appendChild(text);
+
+            col = row.insertCell();
+            text = document.createTextNode(fname);
+            col.appendChild(text);
+
+            col = row.insertCell();
+            text = document.createTextNode(lname);
+            col.appendChild(text);
+        }
+    </script>
+</body>
+
+</html>

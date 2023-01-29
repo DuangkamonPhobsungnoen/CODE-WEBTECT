@@ -1,0 +1,207 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: linear-gradient(#F9EBC8, #FEFBE7, #DAE5D0, #A0BCC2);
+        }
+        
+        .container {
+            position: fixed;
+            width: 100%;
+            top: 15%;
+        }
+        
+        .name {
+            position: fixed;
+            text-align: center;
+            top: 2%;
+            width: 100%;
+            font-size: 40px;
+            font-family: 'Press Start 2P', cursive;
+            color: #1b3018;
+        }
+        
+        .card {
+            flex-direction: row;
+            height: 161.5px;
+            width: 840px;
+        }
+        
+        .table {
+            position: relative;
+            left: 35%;
+            text-align: justify;
+            border: 1.5px solid rgb(122, 122, 122);
+            background: linear-gradient(#F4BFBF, #FFF1CE, #FAF0D7);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="name">CHOMPOO FOOD HUB</div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <img class="card-img-left" src="https://images-ext-2.discordapp.net/external/ogHLlMlHlMrmLXqF_NemO7MtTW6Qj8nucXHjsdcWuIU/https/img.wongnai.com/p/1600x0/2021/04/21/bf2d06f31886461689bada4f0615d5ee.jpg?width=663&height=663" width="180px">
+                    <div class="card-body">
+                        <h5 class="card-title">ผัดผงกระหรี่</h5>
+                        <p class="card-text" style="color: grey;">Delivery by ChompooHub</p>
+                        <button type="button" class="btn btn-warning" onclick="order1()">Add Order</button>
+                    </div>
+                    <img class="card-img-left" src="https://media.discordapp.net/attachments/941545409992605707/1015901918775738400/unknown.png?width=663&height=662" width="180px">
+                    <div class="card-body">
+                        <h5 class="card-title">พริกหยวกผัดพริกสด</h5>
+                        <p class="card-text" style="color: grey;">Delivery by ChompooHub</p>
+                        <button type="button" class="btn btn-warning" onclick="order2()">Add Order</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card">
+                        <img class="card-img-left" src="https://media.discordapp.net/attachments/941545409992605707/1015900286247772191/unknown.png?width=663&height=663" width="180px">
+                        <div class="card-body">
+                            <h5 class="card-title">ข้าวหมูกระเทียม</h5>
+                            <p class="card-text" style="color: grey;">Delivery by ChompooHub</p>
+                            <button type="button" class="btn btn-warning" onclick="order3()">Add Order</button>
+                        </div>
+                        <img class="card-img-left" src="https://media.discordapp.net/attachments/941545409992605707/1015903540146872370/unknown.png?width=663&height=663" width="180px">
+                        <div class="card-body">
+                            <h5 class="card-title">ผัดผักไฟแดง</h5>
+                            <p class="card-text" style="color: grey;">Delivery by ChompooHub</p>
+                            <button type="button" class="btn btn-warning" onclick="order4()">Add Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img-left" src="https://media.discordapp.net/attachments/941545409992605707/1015905258288992347/unknown.png?width=663&height=663" width="180px">
+                    <div class="card-body">
+                        <h5 class="card-title">ไข่เจียว</h5>
+                        <p class="card-text" style="color: grey;">Delivery by ChompooHub</p>
+                        <button type="button" class="btn btn-warning" onclick="order5()">Add Order</button>
+                    </div>
+                    <img class="card-img-left" src="https://media.discordapp.net/attachments/941545409992605707/1015906724961583124/unknown.png?width=663&height=663" width="180px">
+                    <div class="card-body">
+                        <h5 class="card-title">ไข่ข้นปู</h5>
+                        <p class="card-text" style="color: grey;">Delivery by ChompooHub</p>
+                        <button type="button" class="btn btn-warning" onclick="order6()">Add Order</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <table class="table" id="menu">
+                    <tr>
+                        <th>รายการออเดอร์</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let table = document.getElementById("menu");
+
+        function order1() {
+            let row = table.insertRow();
+
+            let col = row.insertCell();
+            let text = document.createTextNode('เมนูผัดผงกระหรี่');
+            col.appendChild(text);
+
+            col = row.insertCell();
+            text = document.createTextNode('x1');
+            col.style.textAlign = "right";
+            col.appendChild(text);
+        }
+
+        function order2() {
+            let row = table.insertRow();
+
+            let col = row.insertCell();
+            let text = document.createTextNode('เมนูพริกหยวกผัดพริกสด');
+            col.appendChild(text);
+
+            col = row.insertCell();
+            text = document.createTextNode('x1');
+            col.style.textAlign = "right";
+            col.appendChild(text);
+        }
+
+        function order3() {
+            let row = table.insertRow();
+
+            let col = row.insertCell();
+            let text = document.createTextNode('เมนูข้าวหมูกระเทียม');
+            col.appendChild(text);
+
+            col = row.insertCell();
+            text = document.createTextNode('x1');
+            col.style.textAlign = "right";
+            col.appendChild(text);
+
+
+        }
+
+        function order4() {
+            let row = table.insertRow();
+
+            let col = row.insertCell();
+            let text = document.createTextNode('เมนูผัดผักไฟแดง');
+            col.appendChild(text);
+
+            col = row.insertCell();
+            text = document.createTextNode('x1');
+            col.style.textAlign = "right";
+            col.appendChild(text);
+        }
+
+        function order5() {
+            let row = table.insertRow();
+
+            let col = row.insertCell();
+            let text = document.createTextNode('เมนูไข่เจียว');
+            col.appendChild(text);
+
+            col = row.insertCell();
+            text = document.createTextNode('x1');
+            col.style.textAlign = "right";
+            col.appendChild(text);
+        }
+
+        function order6() {
+            let row = table.insertRow();
+
+            let col = row.insertCell();
+            let text = document.createTextNode('เมนูไข่ข้นปู');
+            col.appendChild(text);
+
+            col = row.insertCell();
+            text = document.createTextNode('x1');
+            col.style.textAlign = "right";
+            col.appendChild(text);
+        }
+    </script>
+
+</body>
+
+</html>
